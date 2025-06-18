@@ -1,0 +1,24 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: darkgray;
+}
+
+.navbar-brand img {
+  margin-right: 10px;
+}
+
+.carousel-item {
+  font-size: 28px;
+  text-align: center;
+  padding: 30px;
+}
+
+.carousel-item img {
+  margin: auto;
+  height: auto;
+  object-fit: cover;
+}
+
+footer {
+  text-align: center;
+}
