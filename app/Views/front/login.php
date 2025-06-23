@@ -21,6 +21,9 @@
         <div class="col-md-6 offset-md-3 text-center">
           <button type="submit" class="btn btn-success">Entrar</button>
         </div>
+        <p>
+  ¿Aún no estás registrado? <a href="registrate.php">REGÍSTRATE AQUÍ</a>
+</p>
       </form>
     </div>
     <div style="height: 200px"></div>

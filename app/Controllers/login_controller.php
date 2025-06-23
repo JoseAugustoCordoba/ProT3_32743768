@@ -20,7 +20,7 @@ class login_controller extends BaseController
     	$session = session();
     	$model = new usuario_Model();
 
-    	$email = $this->request->getVar('email');
+    	$email = trim($this->request->getVar('email'));
         $password = $this->request->getVar('pass');
 
         $data = $model ->where('email',$email)->first();
@@ -29,7 +29,7 @@ class login_controller extends BaseController
         	$ba   = $data['baja'];
         	if ($ba == 'SI'){
         		$session->setFlashdata('msg','usuario dado de baja');
-        		return redirect()->to('/login_controller');
+        		return redirect()->to('/login');
         	}
         	//se verifican los datos ingresados para iniciar, si cumple inicia sesion
         	$verify_pass =password_verify($password, $pass);
@@ -53,11 +53,11 @@ class login_controller extends BaseController
         	    } else {
         		//no paso la validacion del password
         		$session->setFlashdata('msg','Password Incorrecta');
-        		return redirect()->to('/login_controller');
+        		return redirect()->to('/login');
             }
             }else{
             	$session->setFlashdata('msg','no existe el email o es incorrecto');
-            	return redirect()->to('/login_controller');
+            	return redirect()->to('/login');
         
             }
         }

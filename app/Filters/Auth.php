@@ -2,15 +2,15 @@
 namespace App\Filters;
 use CodeIgniter\HTTP\RequestInterface;
 use CodeIgniter\HTTP\ResponseInterface;
-use CodeIgniter\Filters\FiltersInterface;
+use CodeIgniter\Filters\FilterInterface;
 
 /**
  * 
  */
-class Auth implements FiltersInterface
+class Auth implements FilterInterface
 {
 	
-public function before(RequestInteface $request, $arguments = null)
+public function before(RequestInterface $request, $arguments = null)
 {
 		// si el usuario no esta logueado
 	if(!session()->get('logged_in')){

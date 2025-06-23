@@ -10,7 +10,7 @@ $routes->get('principal', 'Home::index');
 $routes->get('quienes_somos', 'Home::quienes_somos');
 $routes->get('acerca_de', 'Home::acerca_de');
 $routes->get('registrarse', 'Home::registrarse');
-$routes->get('login', 'Home::login');
+//$routes->get('login', 'Home::login');
 
 /*rutas del registro de usuarios*/
 $routes->get('/registrarse', 'usuario_controller::create');
