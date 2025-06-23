@@ -1,15 +1,14 @@
 
- <div class="container my-5">    
-      <h2 class="text-center">Iniciar Sesión</h2>
-
   <!--msj de error-->
     <?php if(session()->getFlashdata('msg')):?>
            <div class="alert alert-warning">
               <?= session()->getFlashdata('msg')?>
            </div>
     <?php endif;?>
-      <!--Inicio del formulario-->
-      <form method="post" action="<?php echo base_url('/enviarlogin') ?>" class="row g-3">
+  <!--Inicio del formulario-->
+ <div class="container my-5">    
+      <h2 class="text-center">Iniciar Sesión</h2>
+      <form class="row g-3">
         <div class="col-md-6 offset-md-3">
           <label for="emailLogin" class="form-label">Correo electrónico</label>
           <input type="email" class="form-control" id="emailLogin" />
